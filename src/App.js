@@ -10,7 +10,9 @@ function App() {
 
   const { isAuthenticated, isLoading } = useAuth0();
 
-  if (isLoading) return <div>Loading...</div>
+  // this fixes imfo jumping on load
+  if (isLoading) return <div>Loading...</div>;
+  
   else return (
 
     <>
