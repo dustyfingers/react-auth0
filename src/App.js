@@ -8,9 +8,10 @@ import './App.css';
 
 function App() {
 
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, isLoading } = useAuth0();
 
-  return (
+  if (isLoading) return <div>Loading...</div>
+  else return (
 
     <>
 
